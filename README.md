@@ -26,7 +26,7 @@
 * Spring Boot AOP
 * Spring Boot Jpa
 
-## (AOP) ?
+# (AOP) ?
 - Kaliteli kod yazarak projeyi geliştirmek için temelde kodun tekrar kullanılabilirliği  , 
 okunabilirliği , modularity ve bakımının yapılabilirliği özelliklerine dikkat ederek uygulama
 geliştirmemiz gerekiyor . 
@@ -62,8 +62,6 @@ tavsiye yöntemi başarıyla tamamlamndıktan sonra yürütülür.
 
 ### @Around ? 
 - Önerilen yöntemi sarar, önerilen yöntem çağrılmadan önce ve sonra işlevsellik sağlar.
-
-
 
 ## @EnableAspectJAutoProxy(proxyTargetClass = true) 
 - AspectJ'nin @Aspect işaretlenmiş bileşenlerin işlenmesi için  destek sağlar . 
