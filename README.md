@@ -47,8 +47,16 @@ sebebi katman bağımsız olması , Projenin istenilen yerinde kullanılması il
 kaynaklanmaktadır.
 
 ### @Before ? 
+```xml
+ @Before("execution(* com.example.springbootaop.service.*.saveUser(..))")
+    public void saveBefore(JoinPoint joinPoint) {
+        logger.info("Kullanıcı bilgilerini giriniz  ");
+        logger.info("{}", joinPoint);
+    }
+```
 + Bu tavsiye , joinPoints yöntemlerinin yürütülmesinden önce çalışır . Bu işlevsellik ,
 önerilen yöntem çağrılmadan önce gerçekleşir.
+
 
 ### @After ? 
 - Bu tavsiye , joinPoint yönteminin yürütülmesi tamamlandıktan sonra yürütülür . Bu işlevsellik , sonuca 
