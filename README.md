@@ -59,10 +59,24 @@ kaynaklanmaktadır.
 
 
 ### @After ? 
+ ```xml
+    @After("execution(* com.example.springbootaop.service.*.saveUser(..))")
+    public void saveAfter(JoinPoint joinPoint) {
+        logger.info("Kullanıcı  bilgileri girildi  ");
+        logger.info("{}", joinPoint);
+    }
+```
 - Bu tavsiye , joinPoint yönteminin yürütülmesi tamamlandıktan sonra yürütülür . Bu işlevsellik , sonuca 
 bakılmaksızın tavsiye yöntemi tamamlandıktan sonra gerçekleşir.
 
 ### @AfterReturning ? 
+ ```xml
+@AfterReturning(value = "execution(* com.example.springbootaop.service.*.saveUser(..))")
+    public void saveAfterReturning(JoinPoint joinPoint) {
+        logger.info("Advice başarıyla tamamlandı ");
+        logger.info("{}", joinPoint);
+    }
+```
 - Bu tavsiye yöntemi yalnızca joinPoints yöntemi normal şekilde yürütülürse yürütülür . Bu işlevsellik ,
 tavsiye yöntemi başarıyla tamamlamndıktan sonra yürütülür.
 
@@ -71,6 +85,14 @@ tavsiye yöntemi başarıyla tamamlamndıktan sonra yürütülür.
 - Bunu, işlemi bildirimsel olarak geri almak için kullanabiliriz.
 
 ### @Around ? 
+```xml
+   @Around(value = "execution(* com.example.springbootaop.service.*.*(..))", argNames = "pjp")
+    public Object logExecutionTime(ProceedingJoinPoint pjp) throws Throwable {
+        logger.info("Anotasyon kullanıldı");
+        logger.info("{}" , pjp);
+        return pjp.proceed();
+    }
+```
 - Önerilen yöntemi sarar, önerilen yöntem çağrılmadan önce ve sonra işlevsellik sağlar.
 
 ## @EnableAspectJAutoProxy(proxyTargetClass = true) 
