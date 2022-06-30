@@ -10,3 +10,19 @@
     </dependency>
 </dependencies>
 ```
+
+## Prerequisites
+
+* AOP
+* MySQL
+
+## Used Technologies
+
+* Spring Boot 2.7.1
+* Spring Boot Validation
+* Lombok
+* Dev Tools
+* MySQL
+* Spring Boot AOP
+* Spring Boot Jpa
+
