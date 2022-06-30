@@ -25,6 +25,8 @@
 * MySQL
 * Spring Boot AOP
 * Spring Boot Jpa
+ 
+ 
 
 # (AOP) ?
 - Kaliteli kod yazarak projeyi geliştirmek için temelde kodun tekrar kullanılabilirliği  , 
